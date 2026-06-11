@@ -1,0 +1,9 @@
+# Last updated: 6/11/2026, 11:38:57 AM
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        dict1 = {}
+        for i in range(len(nums)):
+            if target-nums[i] in dict1:
+                return [dict1[target-nums[i]],i]
+            else:
+                dict1[nums[i]] = i
